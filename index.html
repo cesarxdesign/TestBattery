@@ -47,6 +47,9 @@ pre{white-space:pre-wrap;font:12px/1.45 inherit;max-height:460px;overflow:auto;b
 .tag.call-bad{border-color:var(--bad);background:var(--bad);color:#fff}
 .tag.call-ok{border-color:var(--good);background:var(--good);color:#fff}
 .card.called{opacity:.55}
+textarea#note{width:100%;min-height:92px;margin:4px 0 8px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font-family:inherit;font-size:14px;line-height:1.45;resize:vertical}
+textarea#note:focus{outline:0;border-color:var(--acc)}
+.saved{color:var(--dimmer);font-size:11.5px;margin:-4px 0 8px}
 @media (max-width:820px){.split{flex-direction:column;height:auto}.list,.pane{width:100%;border-right:0}}
 </style></head><body>
 <header><h1>TestBattery</h1><span class="m" id="meta"></span></header>
@@ -61,13 +64,22 @@ let B=null, SEL=null, TAB="all";
 // My verdict on each disagreement: was the filter wrong to cut it, or right?
 // Kept in this browser; battery.py --calls collects it from the open tab.
 let CALLS={}; try{CALLS=JSON.parse(localStorage.getItem("tb-calls")||"{}");}catch(e){}
-function call(f,c){
-  if(CALLS[f.id]&&CALLS[f.id].call===c) delete CALLS[f.id];
-  else CALLS[f.id]={call:c,at:new Date().toISOString(),company:f.company,title:f.title};
+function store(id){
+  const x=CALLS[id];
+  if(x&&!x.call&&!(x.note||"").trim()) delete CALLS[id];
   try{localStorage.setItem("tb-calls",JSON.stringify(CALLS));}catch(e){}
-  // on to the next one without a verdict
-  const R=rows(), i=R.findIndex(x=>x.id===f.id), next=R.slice(i+1).concat(R.slice(0,i)).find(x=>!CALLS[x.id]);
-  if(CALLS[f.id]&&next) SEL=next.id;
+}
+// A note on why, saved as it is typed. It stays with the verdict.
+function note(f,text){
+  CALLS[f.id]={...(CALLS[f.id]||{call:null,company:f.company,title:f.title}),note:text,at:new Date().toISOString()};
+  store(f.id);
+  $("saved").textContent=text.trim()?"saved":"";
+}
+function call(f,c){
+  const was=CALLS[f.id]||{};
+  CALLS[f.id]={...was,call:was.call===c?null:c,at:new Date().toISOString(),company:f.company,title:f.title};
+  store(f.id);
+  // stays on the role: the note on why is written next
   render();
 }
 const TABS=[["all","All",f=>!f.soft],["location","Location",f=>!f.soft&&/location/.test(f.failed_on||"")],
@@ -76,17 +88,18 @@ const TABS=[["all","All",f=>!f.soft],["location","Location",f=>!f.soft&&/locatio
 const link=f=>f.read_url||f.url;
 function rows(){return B.fails.filter(TABS.find(t=>t[0]===TAB)[2]);}
 function render(){
-  $("meta").textContent="run "+B.at+" · rules "+B.criteria+" · "+B.failing+" of "+B.cases+" known answers disagree · "+B.fails.filter(f=>CALLS[f.id]).length+" with my verdict"+(B.settled?" · "+B.settled+" settled as correctly cut":"");
+  $("meta").textContent="run "+B.at+" · rules "+B.criteria+" · "+B.failing+" of "+B.cases+" known answers disagree · "+B.fails.filter(f=>CALLS[f.id]&&CALLS[f.id].call).length+" with my verdict"+(B.settled?" · "+B.settled+" settled as correctly cut":"");
   $("tabs").innerHTML=TABS.map(t=>'<button class="tab'+(t[0]===TAB?" on":"")+'" data-t="'+t[0]+'">'+t[1]+'<span class="n">'+(B.fails.filter(t[2]).length||"")+'</span></button>').join("");
   $("tabs").querySelectorAll(".tab").forEach(b=>b.onclick=()=>{TAB=b.dataset.t;SEL=null;render();});
   const R=rows(), kinds=[...new Set(R.map(f=>f.kind))];
   $("list").innerHTML=R.length?kinds.map(k=>'<div class="group">'+esc(k)+' · '+R.filter(f=>f.kind===k).length+'</div>'
-    +R.filter(f=>f.kind===k).map(f=>'<div class="card'+(f.id===SEL?" sel":"")+(CALLS[f.id]?" called":"")+'" data-id="'+f.id+'"><div class="body">'
+    +R.filter(f=>f.kind===k).map(f=>'<div class="card'+(f.id===SEL?" sel":"")+(CALLS[f.id]&&CALLS[f.id].call?" called":"")+'" data-id="'+f.id+'"><div class="body">'
       +'<div class="t">'+(link(f)?'<a href="'+esc(link(f))+'" target="_blank" rel="noopener">'+esc(f.title)+'</a>':esc(f.title))+'</div>'
       +'<div class="c">'+esc(f.company)+(f.location?' · '+esc(f.location):'')+'</div>'
       +'<div class="why1">'+esc(f.why||"")+'</div></div>'
       +'<div class="side"><div class="tags"><span class="tag bad">'+esc(f.failed_on||f.lane||"")+'</span><span class="tag">'+esc(f.lane||"")+'</span><span class="tag who">'+esc(f.by||"")+'</span></div>'
-      +'<div class="tags">'+(CALLS[f.id]?'<span class="tag call-'+(CALLS[f.id].call==="incorrect"?"bad":"ok")+'">'+CALLS[f.id].call+'ly cut</span>':'')
+      +'<div class="tags">'+(CALLS[f.id]&&CALLS[f.id].call?'<span class="tag call-'+(CALLS[f.id].call==="incorrect"?"bad":"ok")+'">'+CALLS[f.id].call+'ly cut</span>':'')
+        +(CALLS[f.id]&&(CALLS[f.id].note||"").trim()?'<span class="tag">note</span>':'')
         +'<span class="tag who">'+(f.still_up?"still up":"gone")+'</span></div></div></div>').join("")).join("")
     :'<div class="empty">Nothing here: the filter agrees with every known answer'+(TAB==="all"?"":" of this kind")+'.</div>';
   $("list").querySelectorAll(".card").forEach(c=>c.onclick=e=>{if(e.target.tagName==="A")return;SEL=c.dataset.id;render();});
@@ -101,6 +114,7 @@ function pane(){
   $("pane").innerHTML='<h2>'+esc(f.title)+'</h2><div style="color:var(--dim)">'+esc(f.company)+'</div>'
     +'<div class="calls"><button class="bad'+((CALLS[f.id]||{}).call==="incorrect"?" on":"")+'" id="b-bad">Incorrectly cut</button>'
       +'<button class="ok'+((CALLS[f.id]||{}).call==="correct"?" on":"")+'" id="b-ok">Correctly cut</button></div>'
+    +'<textarea id="note" placeholder="Why? Saved as you type.">'+esc((CALLS[f.id]||{}).note||"")+'</textarea><div class="saved" id="saved">'+((CALLS[f.id]||{}).note?"saved":"")+'</div>'
     +'<div class="kind">'+esc(f.kind)+'</div>'
     +row("filter says",esc((f.lane||"").toUpperCase())+" · by "+esc(f.by||"")+(f.read?" · read on "+(f.read==="employer"?"the employer’s page":"a job board’s copy"):"")
         +(f.read_at?" · "+esc(String(f.read_at).slice(0,10)):"")+(f.read_criteria?" · rules "+esc(f.read_criteria):""))
@@ -116,6 +130,7 @@ function pane(){
         :"No saved copy: it was read before pages were kept, or by the old judge.");
   $("b-bad").onclick=()=>call(f,"incorrect");
   $("b-ok").onclick=()=>call(f,"correct");
+  $("note").oninput=e=>note(f,e.target.value);
 }
 fetch("battery.json?"+Date.now()).then(r=>r.json()).then(d=>{B=d;render();})
   .catch(()=>{$("list").innerHTML='<div class="empty">battery.json could not be loaded.</div>';});
