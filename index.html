@@ -45,7 +45,10 @@ pre{white-space:pre-wrap;font:12px/1.45 inherit;max-height:460px;overflow:auto;b
 .calls .bad:hover,.calls .bad.on{border-color:var(--bad);background:var(--bad);color:#fff}
 .calls .ok:hover,.calls .ok.on{border-color:var(--good);background:var(--good);color:#fff}
 .tag.call-bad{border-color:var(--bad);background:var(--bad);color:#fff}
-.calls .dead{flex:.6}
+.calls{flex-wrap:wrap}
+.calls .dead,.calls .see{flex:.6}
+.calls .see:hover,.calls .see.on{border-color:var(--acc);background:var(--acc);color:#fff}
+.tag.call-note{border-color:var(--acc);background:var(--acc);color:#fff}
 .calls .dead:hover,.calls .dead.on{border-color:var(--dim);background:var(--dim);color:var(--bg)}
 .tag.call-dead{border-color:var(--dim);background:var(--dim);color:var(--bg)}
 .tag.call-ok{border-color:var(--good);background:var(--good);color:#fff}
@@ -101,8 +104,8 @@ function render(){
       +'<div class="c">'+esc(f.company)+(f.location?' · '+esc(f.location):'')+'</div>'
       +'<div class="why1">'+esc(f.why||"")+'</div></div>'
       +'<div class="side"><div class="tags"><span class="tag bad">'+esc(f.failed_on||f.lane||"")+'</span><span class="tag">'+esc(f.lane||"")+'</span><span class="tag who">'+esc(f.by||"")+'</span></div>'
-      +'<div class="tags">'+(CALLS[f.id]&&CALLS[f.id].call?'<span class="tag call-'+({incorrect:"bad",correct:"ok",dead:"dead"})[CALLS[f.id].call]+'">'+(CALLS[f.id].call==="dead"?"dead link":CALLS[f.id].call+"ly cut")+'</span>':'')
-        +(CALLS[f.id]&&(CALLS[f.id].note||"").trim()?'<span class="tag">note</span>':'')
+      +'<div class="tags">'+(CALLS[f.id]&&CALLS[f.id].call?'<span class="tag call-'+({incorrect:"bad",correct:"ok",dead:"dead",note:"note"})[CALLS[f.id].call]+'">'+({dead:"dead link",note:"see note"}[CALLS[f.id].call]||CALLS[f.id].call+"ly cut")+'</span>':'')
+        +(CALLS[f.id]&&(CALLS[f.id].note||"").trim()&&CALLS[f.id].call!=="note"?'<span class="tag">note</span>':'')
         +'<span class="tag who">'+(f.still_up?"still up":"gone")+'</span></div></div></div>').join("")).join("")
     :'<div class="empty">Nothing here: the filter agrees with every known answer'+(TAB==="all"?"":" of this kind")+'.</div>';
   $("list").querySelectorAll(".card").forEach(c=>c.onclick=e=>{if(e.target.tagName==="A")return;SEL=c.dataset.id;render();});
@@ -117,7 +120,8 @@ function pane(){
   $("pane").innerHTML='<h2>'+esc(f.title)+'</h2><div style="color:var(--dim)">'+esc(f.company)+'</div>'
     +'<div class="calls"><button class="bad'+((CALLS[f.id]||{}).call==="incorrect"?" on":"")+'" id="b-bad">Incorrectly cut</button>'
       +'<button class="ok'+((CALLS[f.id]||{}).call==="correct"?" on":"")+'" id="b-ok">Correctly cut</button>'
-      +'<button class="dead'+((CALLS[f.id]||{}).call==="dead"?" on":"")+'" id="b-dead">Dead link</button></div>'
+      +'<button class="dead'+((CALLS[f.id]||{}).call==="dead"?" on":"")+'" id="b-dead">Dead link</button>'
+      +'<button class="see'+((CALLS[f.id]||{}).call==="note"?" on":"")+'" id="b-see" title="reviewed: the reason is in the note">See note</button></div>'
     +'<textarea id="note" placeholder="Why? Saved as you type.">'+esc((CALLS[f.id]||{}).note||"")+'</textarea><div class="saved" id="saved">'+((CALLS[f.id]||{}).note?"saved":"")+'</div>'
     +'<div class="kind">'+esc(f.kind)+'</div>'
     +row("filter says",esc((f.lane||"").toUpperCase())+" · by "+esc(f.by||"")+(f.read?" · read on "+(f.read==="employer"?"the employer’s page":"a job board’s copy"):"")
@@ -135,6 +139,7 @@ function pane(){
   $("b-bad").onclick=()=>call(f,"incorrect");
   $("b-ok").onclick=()=>call(f,"correct");
   $("b-dead").onclick=()=>call(f,"dead");
+  $("b-see").onclick=()=>{call(f,"note");const n=$("note");if(n&&!n.value.trim())n.focus();};
   $("note").oninput=e=>note(f,e.target.value);
 }
 fetch("battery.json?"+Date.now()).then(r=>r.json()).then(d=>{B=d;render();})
