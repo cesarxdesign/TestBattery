@@ -92,10 +92,12 @@ const TABS=[["all","All",f=>!f.soft],["location","Location",f=>!f.soft&&/locatio
   ["role","Role",f=>!f.soft&&/role|title/.test(f.failed_on||"")],
   ["other","Other",f=>!f.soft&&!/location|role|title/.test(f.failed_on||"")]];
 const link=f=>f.read_url||f.url;
-function rows(){return B.fails.filter(TABS.find(t=>t[0]===TAB)[2]);}
+// A dead link cannot be judged: it leaves the list the moment it is marked.
+const dead=f=>(CALLS[f.id]||{}).call==="dead";
+function rows(){return B.fails.filter(f=>!dead(f)).filter(TABS.find(t=>t[0]===TAB)[2]);}
 function render(){
-  $("meta").textContent="run "+B.at+" · rules "+B.criteria+" · "+B.failing+" of "+B.cases+" known answers disagree · "+B.fails.filter(f=>CALLS[f.id]&&CALLS[f.id].call).length+" with my verdict"+(B.settled?" · "+B.settled+" settled as correctly cut":"");
-  $("tabs").innerHTML=TABS.map(t=>'<button class="tab'+(t[0]===TAB?" on":"")+'" data-t="'+t[0]+'">'+t[1]+'<span class="n">'+(B.fails.filter(t[2]).length||"")+'</span></button>').join("");
+  $("meta").textContent="run "+B.at+" · rules "+B.criteria+" · "+B.fails.filter(f=>!dead(f)).length+" of "+B.cases+" known answers disagree · "+B.fails.filter(f=>!dead(f)&&CALLS[f.id]&&CALLS[f.id].call).length+" with my verdict"+(B.settled?" · "+B.settled+" settled as correctly cut":"");
+  $("tabs").innerHTML=TABS.map(t=>'<button class="tab'+(t[0]===TAB?" on":"")+'" data-t="'+t[0]+'">'+t[1]+'<span class="n">'+(B.fails.filter(f=>!dead(f)).filter(t[2]).length||"")+'</span></button>').join("");
   $("tabs").querySelectorAll(".tab").forEach(b=>b.onclick=()=>{TAB=b.dataset.t;SEL=null;render();});
   const R=rows(), kinds=[...new Set(R.map(f=>f.kind))];
   $("list").innerHTML=R.length?kinds.map(k=>'<div class="group">'+esc(k)+' · '+R.filter(f=>f.kind===k).length+'</div>'
@@ -138,7 +140,7 @@ function pane(){
         :"No saved copy: it was read before pages were kept, or by the old judge.");
   $("b-bad").onclick=()=>call(f,"incorrect");
   $("b-ok").onclick=()=>call(f,"correct");
-  $("b-dead").onclick=()=>call(f,"dead");
+  $("b-dead").onclick=()=>{const R=rows(), i=R.findIndex(x=>x.id===f.id); call(f,"dead"); SEL=((R[i+1]||R[i-1])||{}).id||null; render();};
   $("b-see").onclick=()=>{call(f,"note");const n=$("note");if(n&&!n.value.trim())n.focus();};
   $("note").oninput=e=>note(f,e.target.value);
 }
