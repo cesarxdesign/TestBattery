@@ -45,6 +45,9 @@ pre{white-space:pre-wrap;font:12px/1.45 inherit;max-height:460px;overflow:auto;b
 .calls .bad:hover,.calls .bad.on{border-color:var(--bad);background:var(--bad);color:#fff}
 .calls .ok:hover,.calls .ok.on{border-color:var(--good);background:var(--good);color:#fff}
 .tag.call-bad{border-color:var(--bad);background:var(--bad);color:#fff}
+.calls .dead{flex:.6}
+.calls .dead:hover,.calls .dead.on{border-color:var(--dim);background:var(--dim);color:var(--bg)}
+.tag.call-dead{border-color:var(--dim);background:var(--dim);color:var(--bg)}
 .tag.call-ok{border-color:var(--good);background:var(--good);color:#fff}
 .card.called{opacity:.55}
 textarea#note{width:100%;min-height:92px;margin:4px 0 8px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font-family:inherit;font-size:14px;line-height:1.45;resize:vertical}
@@ -98,7 +101,7 @@ function render(){
       +'<div class="c">'+esc(f.company)+(f.location?' · '+esc(f.location):'')+'</div>'
       +'<div class="why1">'+esc(f.why||"")+'</div></div>'
       +'<div class="side"><div class="tags"><span class="tag bad">'+esc(f.failed_on||f.lane||"")+'</span><span class="tag">'+esc(f.lane||"")+'</span><span class="tag who">'+esc(f.by||"")+'</span></div>'
-      +'<div class="tags">'+(CALLS[f.id]&&CALLS[f.id].call?'<span class="tag call-'+(CALLS[f.id].call==="incorrect"?"bad":"ok")+'">'+CALLS[f.id].call+'ly cut</span>':'')
+      +'<div class="tags">'+(CALLS[f.id]&&CALLS[f.id].call?'<span class="tag call-'+({incorrect:"bad",correct:"ok",dead:"dead"})[CALLS[f.id].call]+'">'+(CALLS[f.id].call==="dead"?"dead link":CALLS[f.id].call+"ly cut")+'</span>':'')
         +(CALLS[f.id]&&(CALLS[f.id].note||"").trim()?'<span class="tag">note</span>':'')
         +'<span class="tag who">'+(f.still_up?"still up":"gone")+'</span></div></div></div>').join("")).join("")
     :'<div class="empty">Nothing here: the filter agrees with every known answer'+(TAB==="all"?"":" of this kind")+'.</div>';
@@ -113,7 +116,8 @@ function pane(){
     +'</span> · '+esc(x.where||"")+': “'+esc(x.quote||"")+'”</li>').join("");
   $("pane").innerHTML='<h2>'+esc(f.title)+'</h2><div style="color:var(--dim)">'+esc(f.company)+'</div>'
     +'<div class="calls"><button class="bad'+((CALLS[f.id]||{}).call==="incorrect"?" on":"")+'" id="b-bad">Incorrectly cut</button>'
-      +'<button class="ok'+((CALLS[f.id]||{}).call==="correct"?" on":"")+'" id="b-ok">Correctly cut</button></div>'
+      +'<button class="ok'+((CALLS[f.id]||{}).call==="correct"?" on":"")+'" id="b-ok">Correctly cut</button>'
+      +'<button class="dead'+((CALLS[f.id]||{}).call==="dead"?" on":"")+'" id="b-dead">Dead link</button></div>'
     +'<textarea id="note" placeholder="Why? Saved as you type.">'+esc((CALLS[f.id]||{}).note||"")+'</textarea><div class="saved" id="saved">'+((CALLS[f.id]||{}).note?"saved":"")+'</div>'
     +'<div class="kind">'+esc(f.kind)+'</div>'
     +row("filter says",esc((f.lane||"").toUpperCase())+" · by "+esc(f.by||"")+(f.read?" · read on "+(f.read==="employer"?"the employer’s page":"a job board’s copy"):"")
@@ -130,6 +134,7 @@ function pane(){
         :"No saved copy: it was read before pages were kept, or by the old judge.");
   $("b-bad").onclick=()=>call(f,"incorrect");
   $("b-ok").onclick=()=>call(f,"correct");
+  $("b-dead").onclick=()=>call(f,"dead");
   $("note").oninput=e=>note(f,e.target.value);
 }
 fetch("battery.json?"+Date.now()).then(r=>r.json()).then(d=>{B=d;render();})
