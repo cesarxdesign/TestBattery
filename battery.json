@@ -1,48 +1,9 @@
 {
- "at": "2026-10-04 13:59",
+ "at": "2026-10-04 14:02",
  "criteria": "2026-10-04.1",
  "cases": 123,
- "failing": 1,
- "settled": 6,
- "confirmed": 1,
- "fails": [
-  {
-   "id": "db50199e9c67473e",
-   "company": "darkroom",
-   "title": "Senior Designer",
-   "url": "https://jobs.ashbyhq.com/darkroom/6ee92497-4630-4687-a166-d49ec1602755",
-   "lane": "cut",
-   "by": "vision",
-   "why": "The role is primarily brand, performance marketing, and campaign design (paid ads, email/SMS, social, landing pages) for an agency, not a product/UX design role.",
-   "role": "no",
-   "place": "remote",
-   "failed_on": "role",
-   "signals": [
-    {
-     "quote": "Portugal; Brazil; Spain",
-     "where": "side panel",
-     "says": "portugal_in"
-    },
-    {
-     "quote": "Employees based in or near our New York or Lisbon HQs are expected to work hybrid with weekly in-office time.",
-     "where": "footer or small print",
-     "says": "portugal_in"
-    }
-   ],
-   "quote": "Portugal; Brazil; Spain",
-   "open_quote": null,
-   "top_line": "Portugal; Brazil; Spain",
-   "read": "employer",
-   "read_url": "https://jobs.ashbyhq.com/darkroom/6ee92497-4630-4687-a166-d49ec1602755",
-   "read_at": "2026-10-04T13:58:45",
-   "read_criteria": "2026-10-04.1",
-   "location": "Portugal; Spain; Brazil",
-   "posted": "2026-09-09",
-   "source": "ashby/darkroom",
-   "still_up": true,
-   "page": "Senior Designer\nLocation\n\nPortugal; Brazil; Spain\n\nEmployment Type\n\nFull time\n\nLocation Type\n\nRemote\n\nDepartment\n\nCreative\n\nOverview\nApplication\nAbout Darkroom\n\nDarkroom is the leading next-generation growth marketing firm engineering the brands of tomorrow. Founded in 2017, we set out to redefine what a modern agency could be, by replacing the inertia of legacy advertising behemoths with a model built for speed, intelligence, and measurable impact.\n\nAt our core, Darkroom is a human services company powered by Shadow, a universal AI commerce layer that integrates executive-level strategy with proprietary agentic technology. This fusion enables our teams to deliver outsized returns by enhancing creative output, operational efficiency, and revenue generation across every stage of the customer journey.\n\nOur track record speaks for itself: billions in attributable revenue driven across e-commerce marketplaces, media networks, DTC ecosystems, and social commerce platforms. Every engagement feeds into our proprietary data infrastructure, enabling a continuous feedback loop that accelerates growth, improves margins, and compounds results across our client portfolio.\n\nWhat began as a boutique design studio has evolved into one of the fastest-growing private companies in America (Inc. 5000) and among the most effective performance media agencies of the 2020s (Varos). Our founders were recognized by Forbes 30 Under 30 for advancing the intersection of technology, marketing, and advertising, cementing Darkroom’s role as a defining player in the future of media innovation.\n\nAbout the Role\n\nDarkroom is looking for a Senior Designer who’s ready to roll up their sleeves and dive deep into brand, performance, and product design. We’re looking for more than just execution, we’re looking for perspective. You ask smart questions, push creative thinking, and know how to bring ideas to life in a way that’s both strategic and visually sharp.\n\nThis role is for someone confident leading creative projects across a range of deliverables, from landing pages and retention flows to paid ads and digital branding, while staying grounded in strategy and results.\n\nYou’ll work closely with Retention Managers, Developers, and Designers to deliver polished work that balances brand and performance. You’ll lead initiatives independently while collaborating often, and communicate directly with clients, presenting designs, leading workshops, and managing approvals.\n\nYou’ll report to our Director of Creative and work directly with fast-growing brands where the stakes and opportunities are high. This role is designed for someone ready to take on more ownership, broaden their skills across disciplines, and grow quickly within a team that values both creativity and clarity.\n\nThis is a fully remote role supporting a team in the EST time zone.\n\nWhat You’ll Do\n\nDesign digital assets that support a range of client marketing initiatives briefed by a Marketing Manager: paid ads, email & SMS, landing pages, organic social, Amazon creative, and more.\n\nCreate design systems based on a client’s brand guidelines to be used across multiple channels, ensuring consistency of a client’s brand identity, look, and feel.\n\nCommunicate with clients directly and present designs on calls, lead clients through workshopping, and obtain approvals while maintaining a strong working relationship.\n\nDevelop a deep understanding of what factors drive customers to convert on different marketing channels and execute designs within established best practices.\n\nCollaborate closely with team members and clients for feedback and approvals to ensure your work adheres to a high standard of craft.\n\nDesign landing pages within Figma by using UI/UX best practices and adhering to Darkroom’s web design guidelines.\n\nCollaborate with project managers and developers to deliver web design initiatives such as landing pages, web design updates, and more.\n\nThis role is on the Creative team and reports to the Design Director. You’ll work alongside a team of 8+ Designers, each supporting their own roster of 5+ client accounts.\n\nRequirements\n\nHard Skills:\n\n3+ years of proven design work experience (agency or design studio experience is preferred)\n\nDigital portfolio that demonstrates strong branding & identity, visual design, marketing design, and/or web design.\n\nProven understanding of design principles including layout, hierarchy, color theory, typography, and composition.\n\nStrong ability to lead client calls, drive workshopping sessions, and manage a client relationship directly.\n\nStrong proficiency in Figma and Adobe Creative Suite is required.\n\nFluency in English is required. Candidate must be proficient in speaking, writing, and presenting work to clients in English.\n\nSoft Skills:\n\nHighly creative individual who strives for detail-oriented design and can execute comfortably in a number of styles.\n\nExcellent communication skills\n\nCan effectively collaborate with cross-functional teams and turn project requirements into compelling designs.\n\nSelf-motivated and proactive with a strong sense of ownership and accountability for detail-oriented deliverables.\n\nSystematic thinker, who problem solves and time manages without heavy direction.\n\nNice to Have\n\nAdvanced knowledge of Adobe Creative Suite\n\nBFA or higher degree in Graphic Design or Fine Arts\n\nWorking at Darkroom\n\nDarkroom is not a typical agency. We are looking for A players who want to build something great. We move fast, think deeply, and expect every team member to bring insight and rigor to everything they touch. We hold a high bar for performance, creativity, and ownership — but we also support each other relentlessly. No egos, no red tape — just world-class talent building something remarkable.\n\nWe believe in autonomy with accountability, truth over comfort, and outcomes over optics.\n\nUnlimited PTO + Local holidays (Relevant to your hub): Rebooting is part of the work. Take the time you need to stay sharp.\n\nRemote-First Cu",
-   "confirmed": true,
-   "kind": "a role I would take; the filter cuts it"
-  }
- ]
+ "failing": 0,
+ "settled": 7,
+ "confirmed": 0,
+ "fails": []
 }
