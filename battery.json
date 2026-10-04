@@ -1,9 +1,588 @@
 {
- "at": "2026-10-04 14:02",
- "criteria": "2026-10-04.1",
- "cases": 123,
- "failing": 0,
- "settled": 7,
+ "at": "2026-10-04 15:59",
+ "criteria": "2026-10-04.2 trial (not live)",
+ "cases": 91,
+ "failing": 15,
+ "settled": 0,
  "confirmed": 0,
- "fails": []
+ "fails": [
+  {
+   "id": "a5d10bf4ebb84ba8",
+   "company": "Velsera",
+   "title": "Director, Product Design",
+   "url": "https://apply.workable.com/j/4E093472E0",
+   "lane": "unsure",
+   "by": "new rules (trial)",
+   "why": "The description opens with 'Europe / Remote' (includes Portugal) but the structured location tags list only United Kingdom and Sweden, creating a direct contradiction on the page.",
+   "role": "yes",
+   "place": "unclear",
+   "failed_on": "unsure",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "United Kingdom\nStockholm, Stockholm County, Sweden",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "Director Product Design \nEurope / Remote",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://apply.workable.com/velsera/j/4E093472E0",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "Stockholm, Sweden",
+   "posted": "2026-07-24",
+   "source": "workable/velsera",
+   "still_up": true,
+   "top_line": "live lane today: cut",
+   "kind": "I called it correctly cut; the new rules say unsure",
+   "page": "Director, Product Design\n\nRemoteProductFull time\n\nUnited Kingdom\nStockholm, Stockholm County, Sweden\nOVERVIEW\nAPPLICATION\nShare this job\n \nDescription\n\nDirector Product Design \n\nEurope / Remote \nReports to the Chief Strategy and Product Officer \n\nAbout Velsera \n\nVelsera builds software that turns complex biological data into research insight and clinical answers. Our platforms work across multi-omic and multi-modal data: genomics alongside proteomics, transcriptomics and other omics, together with imaging, clinical and real-world data, at the scale of some of the world's largest biomedical programs. Pharmaceutical companies, biotechs, public research initiatives and diagnostic laboratories use our products to advance precision medicine. \n\nWe run like a scale-up: small teams with real authority, fast decisions, and AI woven into how we work day to day. We measure ourselves on impact for our customers and, ultimately, for patients. \n\nThe opportunity \n\nYou'd be joining as the design authority for our Seven Bridges Platform and the leader of design at Velsera, just as we rebuild how we design, validate and ship. You report directly to the Chief Strategy and Product Officer, and decisions that take quarters elsewhere happen here in days. Our product managers have already started turning ideas into working, on-brand prototypes with AI and put them in front of customers within weeks. The design foundations that make that speed safe are yours to build and own: design tokens, a component library, and the patterns everyone works with. \n\nThat's the shape of your influence here. Product managers prototype with the system you build, you review what customers will see, and once a concept is validated, production design belongs to you: journeys that hold up across every state, edge case and installation. This is a product bioinformaticians, scientists and clinicians rely on every day, and you set its bar. \n\nThis is a hands-on leadership role. You'll manage our product designer working on the clinical side of our portfolio, you'll build the design function as it grows, and you'll keep doing the craft yourself. There's no large design team to inherit; there's one to create. \n\nThe product is changing as fast as the craft is. Our users increasingly work alongside AI in research and diagnostic workflows, with dense, high-stakes data from many sources. Someone needs to rethink the journeys, trust models and information design of software like ours for that reality. That is a key remit of this job. \n\nThis role won't suit everyone. If you're looking for a mature design organization with settled processes, you won't find that here yet. If you want to build the system a whole company designs with, lead design for products with real clinical stakes, and do it at scale-up speed, we should talk. \n\nWhat will you do?\n\nOwn the user journeys, flows and interaction design of the Seven Bridges Platform: partner with product managers on problems, outcomes and scope, then own how the experience actually works, from structure and states down to the number of clicks. \nBuild our design system from the ground up: design tokens, a component library aligned with our front-end code, and the standards that bring our product surfaces together under one visual language. The whole organization will prototype with what you build. \nKeep rapid prototyping fast and safe: maintain the foundations PMs build with, review prototype quality before customers see it, and take validated prototypes through to production-ready design. \nManage our product designer on the clinical side: set goals, develop their craft, give honest feedback, and answer for the quality of design across both businesses. As the team grows, you'll hire and shape it. \nDesign for AI in the product itself: assistant and copilot experiences, AI-generated results that scientists and clinicians can trust and verify, and workflows where automation and human judgment work together. \nWork closely with front-end engineers so the design system lives in code, not only in Figma. \nUse product analytics to see where users struggle, make experience debt visible, and give product leadership a clear case for what to fix first. \nBring design judgment into strategy conversations at the leadership level. \n\nYour first few months \n\nThe first version of the design system is live, with tokens and core components in Figma and in code, and product managers are actually prototyping on top of it. You've reviewed working prototypes before they went in front of real customers, and what we shipped is better for it. You and the designer you manage have a real working rhythm, with clear goals and honest feedback, and it shows in the work. And your map of our experience debt is on the leadership table with a clear case for what to fix first. \n\nRequirements\n\nWhat do you bring to the table?\n\nYou've spent seven or more years in product design, with senior ownership of user journeys on complex, data-heavy or scientific software. \n\nYou've built or led at least one design system that engineering genuinely adopted, and you know what it takes to keep one alive. \nYou've managed designers formally, not just mentored them, and the people you've managed got better and would work for you again. \nYou're comfortable having your biggest impact through a system other people build with, not only through screens you designed yourself. \nYou've chosen fast, ambiguous environments before, and you're looking for another one. \nYou already use AI tools to design, prototype and produce working software (we work with Claude, from design exploration through design-to-code), and you have well-formed opinions about where these tools help and where they mislead. \nYou've designed AI-powered product experiences, or you have a clear point of view on trust, transparency and human oversight in AI interfaces. \nYou're an expert in Figma, including variables and design-to-code workflows such as Code Connect. \nYou know enough front-end to collab"
+  },
+  {
+   "id": "3aa99cbda053491d",
+   "company": "jobgether",
+   "title": "UX Designer",
+   "url": "https://jobs.lever.co/jobgether/874af8eb-94c8-4743-ad9d-52d4aaf54b99",
+   "lane": "unsure",
+   "by": "new rules (trial)",
+   "why": "The posting states the role is based in Spain but also calls it a fully remote EMEA-region position, so the two explicit location statements contradict each other.",
+   "role": "yes",
+   "place": "unclear",
+   "failed_on": "unsure",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Spain Research & Development – Design /Contract /Remote",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a UX Designer based in Spain.",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "Fully remote position within the EMEA region, with Switzerla",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/874af8eb-94c8-4743-ad9d-52d4aaf54b99",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "Spain",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I called it correctly cut; the new rules say unsure"
+  },
+  {
+   "id": "8f487ea467164f4e",
+   "company": "jobgether",
+   "title": "Senior Product Designer",
+   "url": "https://jobs.lever.co/jobgether/1f496194-1d38-452a-845f-1e8f1088b673",
+   "lane": "unsure",
+   "by": "new rules (trial)",
+   "why": "Opening line says 'based in United States' but later explicit requirements and benefits repeatedly list Europe (and Canada/LATAM) as eligible for this fully remote role, so Portugal appears included despite the contradictory opener.",
+   "role": "yes",
+   "place": "unclear",
+   "failed_on": "unsure",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "tag",
+     "quote": "US",
+     "where": "tag"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a Senior Product Designer based i",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "compensation is adjusted based on location for applicants ba",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "Applicants must be authorized to work in the United States, ",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "Location-adjusted compensation for eligible applicants based",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/1f496194-1d38-452a-845f-1e8f1088b673",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "US",
+   "posted": "2026-09-30",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say unsure"
+  },
+  {
+   "id": "c9e94469649a4ee8",
+   "company": "jobgether",
+   "title": "UX Designer",
+   "url": "https://jobs.lever.co/jobgether/ce82015c-761e-4d5d-bb22-ec55b20f9319",
+   "lane": "unsure",
+   "by": "new rules (trial)",
+   "why": "The posting contradicts itself: one line requires the candidate be based in Switzerland, another says the role is remote across the whole EMEA region (which includes Portugal) with Switzerland merely 'included' among eligible locations.",
+   "role": "yes",
+   "place": "unclear",
+   "failed_on": "unsure",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a UX Designer based in Switzerlan",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "tag",
+     "quote": "Switzerland",
+     "where": "tag"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "Fully remote position within the EMEA region, with Switzerla",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/ce82015c-761e-4d5d-bb22-ec55b20f9319",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "Switzerland",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say unsure"
+  },
+  {
+   "id": "9a63c0c033ed4d9b",
+   "company": "jobgether",
+   "title": "UX Designer",
+   "url": "https://jobs.lever.co/jobgether/3b6faf9f-745a-4396-aca9-f77cb3a0b7a0",
+   "lane": "unsure",
+   "by": "new rules (trial)",
+   "why": "The posting explicitly requires the candidate to be based in France, but a later benefits line says the role is remote across all of EMEA (naming Switzerland) - the two statements directly contradict each other.",
+   "role": "yes",
+   "place": "unclear",
+   "failed_on": "unsure",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "France",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a UX Designer based in France.",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "Fully remote position within the EMEA region, with Switzerla",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/3b6faf9f-745a-4396-aca9-f77cb3a0b7a0",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "France",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say unsure"
+  },
+  {
+   "id": "bbdec51dd9994a97",
+   "company": "jobgether",
+   "title": "UX Designer",
+   "url": "https://jobs.lever.co/jobgether/216fbbd5-d302-46ea-b6d0-a026e53c4441",
+   "lane": "unsure",
+   "by": "new rules (trial)",
+   "why": "The posting contradicts itself, stating the role is based in the UK while also listing it as remote across the EMEA region including Switzerland.",
+   "role": "yes",
+   "place": "unclear",
+   "failed_on": "unsure",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "UKResearch & Development – Design /Contract /Remote",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a UX Designer based in United Kin",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "Fully remote position within the EMEA region, with Switzerla",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/216fbbd5-d302-46ea-b6d0-a026e53c4441",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "UK",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say unsure"
+  },
+  {
+   "id": "ee97637a22254a99",
+   "company": "jobgether",
+   "title": "Senior Product Designer",
+   "url": "https://jobs.lever.co/jobgether/f406c9ae-9888-4b53-819b-b60f55538046",
+   "lane": "cut",
+   "by": "new rules (trial)",
+   "why": "Despite a remote tag, the posting explicitly states the role is based in the Netherlands, which excludes Portugal.",
+   "role": "yes",
+   "place": "no",
+   "failed_on": "location",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Netherlands",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a Senior Product Designer based i",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/f406c9ae-9888-4b53-819b-b60f55538046",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "Netherlands",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say cut"
+  },
+  {
+   "id": "88075489a881463c",
+   "company": "jobgether",
+   "title": "Senior Product Designer",
+   "url": "https://jobs.lever.co/jobgether/e1a2a2d9-ef78-4010-a2b9-e2204128afca",
+   "lane": "cut",
+   "by": "new rules (trial)",
+   "why": "The posting twice states the role is based in Switzerland, which is not Portugal, despite a generic remote-benefits line about 'eligible European locations'.",
+   "role": "yes",
+   "place": "no",
+   "failed_on": "location",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Switzerland Research & Development – Design /Full-Time /Remo",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a Senior Product Designer based i",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/e1a2a2d9-ef78-4010-a2b9-e2204128afca",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "Switzerland",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say cut"
+  },
+  {
+   "id": "9a65fbeb06e9402f",
+   "company": "jobgether",
+   "title": "Senior Product Designer",
+   "url": "https://jobs.lever.co/jobgether/8bac5f4d-1c2c-42a8-a691-163e92274f27",
+   "lane": "unsure",
+   "by": "new rules (trial)",
+   "why": "The posting directly contradicts itself: the title/intro require the candidate be based in the UK, while the benefits section says the role is remote from 'eligible European locations.'",
+   "role": "yes",
+   "place": "unclear",
+   "failed_on": "unsure",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "UK Research & Development – Design /Full-Time /Remote",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a Senior Product Designer based i",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "Fully remote working arrangement from eligible European loca",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/8bac5f4d-1c2c-42a8-a691-163e92274f27",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "UK",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say unsure"
+  },
+  {
+   "id": "c20d8e43486945de",
+   "company": "jobgether",
+   "title": "Senior Product Designer",
+   "url": "https://jobs.lever.co/jobgether/6e4d5eab-3120-4cd9-a215-2d7059bd7bea",
+   "lane": "cut",
+   "by": "new rules (trial)",
+   "why": "The posting explicitly states the role is based in Ireland, an explicit single-country requirement that overrides the vaguer 'eligible European locations' benefits line.",
+   "role": "yes",
+   "place": "no",
+   "failed_on": "location",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "tag",
+     "quote": "Ireland",
+     "where": "tag"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a Senior Product Designer based i",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_in",
+     "kind": "generic",
+     "quote": "Fully remote working arrangement from eligible European loca",
+     "where": "generic"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/6e4d5eab-3120-4cd9-a215-2d7059bd7bea",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "Ireland",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say cut"
+  },
+  {
+   "id": "d3c29f3a2e8243b2",
+   "company": "jobgether",
+   "title": "Senior Product Designer",
+   "url": "https://jobs.lever.co/jobgether/1820b518-91fd-49e5-a215-f3851da6c84c",
+   "lane": "cut",
+   "by": "new rules (trial)",
+   "why": "Two explicit statements (location tag and opening paragraph) specify the role requires being based in Germany, overriding the vague 'eligible European locations' benefit line.",
+   "role": "yes",
+   "place": "no",
+   "failed_on": "location",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "GermanyResearch & Development – Design /Full-Time /Remote",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a Senior Product Designer based i",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/1820b518-91fd-49e5-a215-f3851da6c84c",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "Germany",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say cut"
+  },
+  {
+   "id": "db2b1bb9639c4cbf",
+   "company": "jobgether",
+   "title": "Senior Product Designer",
+   "url": "https://jobs.lever.co/jobgether/2a4ee881-e52a-4d15-8d7a-7a7f21e3427f",
+   "lane": "cut",
+   "by": "new rules (trial)",
+   "why": "Two explicit statements tie the role to France specifically, overriding the vague 'eligible European locations' benefit line.",
+   "role": "yes",
+   "place": "no",
+   "failed_on": "location",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "France Research & Development – Design /Full-Time /Remote",
+     "where": "explicit"
+    },
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "Our partner is looking for a Senior Product Designer based i",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.lever.co/jobgether/2a4ee881-e52a-4d15-8d7a-7a7f21e3427f",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "France",
+   "posted": "2026-09-28",
+   "source": "lever/jobgether",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "I flagged the location reasoning; the new rules say cut"
+  },
+  {
+   "id": "5a832a508ec942c3",
+   "company": "Bending Spoons",
+   "title": "UX/UI Designer",
+   "url": "https://www.uxremotetalent.com/ux-job/ux-ui-designer-2",
+   "lane": "cut",
+   "by": "new rules (trial)",
+   "why": "The posting explicitly requires physical presence in the Milan office for the first few months regardless of eventual location, and afterward only allows remote work from unspecified 'approved countries', so remote-from-Portugal from day one is not offered.",
+   "role": "yes",
+   "place": "no",
+   "failed_on": "location",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "we expect you to spend most days in our Milan office during ",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://jobs.bendingspoons.com/positions/6686d0e2a65ca3994b3a415b",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": null,
+   "posted": "2026-07-28",
+   "source": "uxremotetalent",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "a role I would take; the new rules cut it"
+  },
+  {
+   "id": "f88b2a171ebf4974",
+   "company": "Nacar Design",
+   "title": "Full Stack Product Designer - Brasil",
+   "url": "https://nacardesign.com/o/full-stack-product-designer-brasil",
+   "lane": "cut",
+   "by": "new rules (trial)",
+   "why": "Despite the generic 'Remote job' tag, the posting explicitly states the role is based in the Porto Alegre (Brazil) studio under a hybrid model, which excludes Portugal.",
+   "role": "yes",
+   "place": "no",
+   "failed_on": "location",
+   "signals": [
+    {
+     "says": "portugal_out",
+     "kind": "explicit",
+     "quote": "This role will be based in our Porto Alegre studio.",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://nacardesign.com/o/full-stack-product-designer-brasil",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "Remote job",
+   "posted": "2026-07-27",
+   "source": "recruitee/nacardesign",
+   "still_up": true,
+   "top_line": "live lane today: unsure",
+   "kind": "a role I would take; the new rules cut it",
+   "page": "Full Stack Product Designer - Brasil\nNacar Design\n\nLocation\nRemote job\n\nWe are Nacar .\nA solution-first creative partner helping ambitious organizations shape and deliver the right products, services and experiences — with clarity, rigor and creative excellence.\n\nRooted in Palo Alto, Barcelona , and with studios in Bilbao, Guadalajara, Porto Alegre and China, we're a global team of 130+ Nacarians from more than 23 nationalities . This role will be based in our Porto Alegre studio.\n\nTwenty years, 70 design awards and 10+ client ecosystems later, we've learned that creativity is only worth something when it turns into real solutions. That's why we work in a way that connects craft with systems — building things that don't just look right, but perform , scale and generate measurable value for our clients.\n\nA Nacarian is a creative orchestrator, shaped by Criteria , Adaptability and Ownership . Someone who reads complexity, anticipates what matters, and moves fast with intent. We come from different disciplines — strategy, research, industrial and digital design, brand, service, engineering — but we share the belief that great ideas only matter when they become real.\n\nNacar is entering a new chapter. We're strengthening our capabilities, growing into new markets, and building the organization that will shape what's next. With a hybrid work model and flexible hours , we're powered by a culture of communication , collaboration and ownership — with the ambition of becoming the trusted creative decision partner for the leaders redefining the future of their industries.\n\nIf you're excited by building — not just joining — this is a great moment to be here.\n\nIs this something you feel identified with?\n\nWe're currently looking for a UX/Product Designer to join our team and work on a Healthcare CRM environment with one of our top-tier clients in the health sector — a role that balances product delivery, research depth and strong stakeholder alignment.\n\nThis is not a purely visual or delivery-oriented UX role. The project context requires a designer who can operate in ambiguity, work across product and technical constraints, and create clarity through research , prioritisation and cross-functional collaboration . The role implies working actively with the UX Lead, while having enough autonomy to make decisions independently and move work forward with confidence."
+  },
+  {
+   "id": "e3f333321a6c43bd",
+   "company": "baesh social UG",
+   "title": "UX Designer/Product Lead (Core Team, Equity-Based, Remote EU-wide)",
+   "url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
+   "lane": "cut",
+   "by": "new rules (trial)",
+   "why": "Role is explicitly an unpaid equity-only core team position, which disqualifies it regardless of good EU-wide remote location fit.",
+   "role": "no",
+   "place": "remote",
+   "failed_on": "role",
+   "signals": [
+    {
+     "says": "portugal_in",
+     "kind": "explicit",
+     "quote": "Europe-based only (EU + Eastern Partnership countries), full",
+     "where": "explicit"
+    }
+   ],
+   "read": "employer",
+   "read_url": "https://join.com/companies/baesh/16750109-ux-designer-product-lead-core-team-equity-based-remote-eu-wide",
+   "read_at": "2026-10-04",
+   "read_criteria": "2026-10-04.2 trial",
+   "location": "Berlin, Germany, Worldwide",
+   "posted": "2026-02-19",
+   "source": "join/baesh",
+   "still_up": true,
+   "top_line": "live lane today: open",
+   "kind": "a role I would take; the new rules cut it"
+  }
+ ]
 }
