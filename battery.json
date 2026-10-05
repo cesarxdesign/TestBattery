@@ -1,9 +1,37 @@
 {
- "at": "2026-10-05 11:38",
+ "at": "2026-10-05 12:01",
  "criteria": "2026-10-05.2",
  "cases": 125,
- "failing": 0,
+ "failing": 1,
  "settled": 8,
  "confirmed": 0,
- "fails": []
+ "fails": [
+  {
+   "id": "b69d819df20f4807",
+   "company": "Tabby",
+   "title": "Senior Product Designer, Tabby Shop",
+   "url": "https://euremotejobs.com/job/senior-product-designer-tabby-shop/",
+   "lane": "cut",
+   "by": "vision",
+   "why": "the page read is a different job · This is Tabby's general careers/job-board page listing 62 open roles; the specific posting 'Senior Product Designer, Tabby Shop' does not appear in the list, so this is not that job posting.",
+   "role": "unclear",
+   "place": "unclear",
+   "failed_on": "cut",
+   "signals": [],
+   "quote": null,
+   "open_quote": null,
+   "top_line": null,
+   "read": "employer",
+   "read_url": "https://tabby.pinpointhq.com/",
+   "read_at": "2026-10-05T11:48:41",
+   "read_criteria": "2026-10-05.2",
+   "location": "Worldwide",
+   "posted": "2026-07-29",
+   "source": "euremotejobs",
+   "still_up": true,
+   "page": "Departments\nRecruitment FAQs\nLocations\nEltezam\nView Jobs\nQuit your day job.\n\nWe are on a mission to create financial freedom in the way people shop, earn and save by reshaping their relationship with money. And we’d like your help.\n\nExplore Roles\nWhat we believe in.\nMeaningful impact\nWe do things for impact not for output. Our work has the most meaning when people use the tools we build to improve their daily lives.\nThe golden rule\nDo unto others as you would have them do unto you. We treat each other with respect and act with integrity with everything that we do. This shines through into the products we craft, and the teams that we build.\nUnapologetic curiosity\nWork just can’t just be about solving problems. We want to create joy and inspire – show the world what could be. Even if it means taking risks and not always choosing the safest path forward.\nIs this the right team for me?\nMore than anything, we want you to be happy here so we want you to know what working at Tabby's like. In this video, our CEO gives some background on where we're headed as a business, and our team shares what's good (and hard) about working here.\nPlay\n00:00\n00:13\nMute\nEnter fullscreen\nPlay\n\nA company with a progressive & positive culture that practices what it preaches. Great camaraderie across teams, centred around enjoying fulfilling work & creating a great product.\n\nRead Employee Reviews\n“You’ll be joining a team of smart, capable, helpful people that want you to win, our clients to be wowed, and our business to grow.”\nSARAH SMITH, MARKETING\nCurrent Opportunities\nAll Brands\nAll Locations\nAll Divisions\nAll Departments\n\n62 jobs available\n\nJob Title\nBrand\nLocation\nDivision\nDepartment\nEmployment Type\nInformation Security Lead (Defensive)\nTabby\nKSA\nInformation Security\nInfoSec Monitoring\nFull Time\nBusiness Development Executive\nTabby\nKSA\nBusiness Development\nBusiness Development\nFull Time\nCompliance Officer\nTweeq\nKSA\nLegal, Compliance and Enterprise Risk\nCompliance\nFull Time\nCustomer Service Representative - Saudi National\nTabby\nKSA\nCustomer Experience\nCustomer Support Ops\nFull Time\nCustomer Service Representative Recruitment Day – Riyadah\nTabby\nKSA\nCustomer Experience\nCustomer Support Ops\nFull Time\nCustomer Support Representative.\nTabby\nEgypt\nCustomer Experience\nCustomer Support Ops\nFull Time\nData Analyst (Regulatory Reporting)\nTabby\nEgypt\nRisk Core\nRisk Core\nFull Time\nDataOps Intern\nTabby\nKSA\nEngineering\nInfrastructure\nInternship\nEngineering Manager (ML)\nTabby\nRemote\nEngineering\nMarketplace, Engineering\nFull Time\nEngineering Manager (ML)\nTabby\nRemote/Poland\nEngineering\nMarketplace, Engineering\nFull Time\nEngineering Manager (ML)\nTabby\nRemote/Spain\nEngineering\nMarketplace, Engineering\nFull Time\nEngineering Manager (ML)\nTabby\nRemote/Portugal\nEngineering\nMarketplace, Engineering\nFull Time\nEngineering Manager (ML)\nTabby\nRemote/Serbia\nEngineering\nMarketplace, Engineering\nFull Time\nFinancial Reporting Lead\nTabby\nKSA\nFinance\nControllership\nFull Time\nFinOps Associate\nTabby\nKSA\nFinance\nCapital\nFull Time\nGeneral Manager\nTabby\nKuwait\nGeneral Management\nGeneral Management\nFull Time\nInformation Security Engineer (SOC L2)\nTabby\nKSA\nInformation Security\nInfoSec Monitoring\nFull Time\nInformation Security Specialist\nTabby\nKSA\nInformation Security\nInfoSec GRC\nFull Time\nInstructional Designer\nTabby\nEgypt\nCustomer Experience\nTraining and Quality\nFull Time\nIntern - People Operations - CX\nTabby\nKSA\nPeople\nPeople Experience\nInternship\nIntern Data Engineer\nTabby\nKSA\nEngineering\nData Platform & ML\nInternship\nIntern QA Engineer\nTabby\nKSA\nEngineering\nRisk Technologies, Engineering\nInternship\nInternal Audit Lead - Financial Risk\nTabby\nUAE\nInternal Audit\nInternal Audit\nFull Time\nLead Anti-Fraud Officer\nTabby\nKSA\nRisk & Credit\nRisk B2C\nFull Time\nLead Auditor-IT Audit\nTabby\nKSA\nInternal Audit\nInternal Audit\nFull Time\nMarketing Manager, CRM\nTabby\nEgypt\nMarketing\nProduct Marketing\nFull Time\nPartner Support Specialist\nTabby\nEgypt\nCustomer Experience\nPartner Support Ops\nFull Time\nPartner Support Specialist, Saudi National - 11th of Oct\nTabby\nKSA\nCustomer Experience\nPartner Support Ops\nFull Time\nPeople Experience Partner\nTabby\nKSA\nPeople\nPeople Experience\nFull Time\nProduct & Design Intern (Tabby Image)\nTabby\nKSA\nProduct\nDesign\nInternship\nProduct & Design Intern (Tabby Imagine)\nTabby\nKSA\nProduct\nMarketplace, Product\nInternship\nProduct & Design Intern (Tabby Imagine)\nTabby\nKSA\nTechnology\nProduct\nInternship\nRevenue Operations Specialist\nTabby\nKSA\nBusiness Development\nBusiness Development\nFull Time\nSenior Auditor – Business Audit\nTabby\nKSA\nInternal Audit\nInternal Audit\nFull Time\nSenior Cards Portfolio Manager\nTabby\nKSA\nCommercial\nPortfolio\nFull Time\nSenior Commercial Manager\nTabby\nKuwait\nCommercial\nMerchant Business\nFull Time\nSenior Copywriter II\nTabby\nKSA\nMarketing\nBrand Studio\nFull Time\nSenior Database Administrator (ClickHouse)\nTabby\nRemote\nEngineering\nInfrastructure\nFull Time\nSenior Database Administrator (ClickHouse)\nTabby\nRemote/Armenia\nEngineering\nInfrastructure\nFull Time\nSenior Database Administrator (ClickHouse)\nTabby\nRemote/Kazakhstan\nEngineering\nInfrastructure\nFull Time\nSenior Database Administrator (ClickHouse)\nTabby\nRemote/Ukraine\nEngineering\nInfrastructure\nFull Time\nSenior Database Administrator (ClickHouse)\nTabby\nRemote/Portugal\nEngineering\nInfrastructure\nFull Time\nSenior Database Administrator (ClickHouse)\nTabby\nRemote/Spain\nEngineering\nInfrastructure\nFull Time\nSenior Database Administrator (ClickHouse)\nTabby\nRemote/Serbia\nEngineering\nInfrastructure\nFull Time\nSenior DevOps Engineer\nTabby\nKSA\nEngineering\nInfrastructure\nFull Time\nSenior Manager Information Security\nTabby\nUAE\nInformation Security\nInfoSec Monitoring\nFull Time\nSenior Manager Information Security\nTabby\nRemote/Kazakhstan\nInformation Security\nInfoSec Monitoring\nFull Time\nSenior Manager Information Security\nTabby\nRemote/Uzbekistan\nInformation Security\nInfoSec Monitoring\nFull Time\nSenior Manager Information Security\nTabby\nRemote/Yerevan\nInformation Security\nInfoSec Monitoring\nFu",
+   "confirmed": null,
+   "kind": "a role I would take; the filter cuts it"
+  }
+ ]
 }
