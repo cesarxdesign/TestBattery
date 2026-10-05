@@ -134,7 +134,9 @@ function render(){
         +(CALLS[f.id]&&(CALLS[f.id].note||"").trim()&&CALLS[f.id].call!=="note"?'<span class="tag">note</span>':'')
         +'<span class="tag who">'+(f.still_up?"still up":"gone")+'</span></div></div></div>').join("")).join("")
     :'<div class="empty">Nothing here: the filter agrees with every known answer'+(TAB==="all"?"":" of this kind")+'.</div>';
-  $("list").querySelectorAll(".card").forEach(c=>c.onclick=e=>{if(e.target.tagName==="A")return;SEL=c.dataset.id;render();});
+  $("list").querySelectorAll(".card").forEach(c=>c.onclick=e=>{SEL=c.dataset.id;
+    // the title opens the posting AND selects the row; drawn a moment later so the link still opens
+    if(e.target.tagName==="A") setTimeout(render,0); else render();});
   pane();
 }
 function pane(){
