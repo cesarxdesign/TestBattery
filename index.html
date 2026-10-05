@@ -175,6 +175,9 @@ $("copy").onclick=async()=>{
   catch(e){prompt("Copy this:",text);}
   setTimeout(()=>{$("copy").textContent="Copy my verdicts";},2500);
 };
-fetch("battery.json?"+Date.now()).then(r=>r.json()).then(async d=>{B=d;render();await pull();render();})
+// ?f=review loads review.json: a list put up for one review, which the
+// nightly battery does not overwrite.
+const FILE=(new URLSearchParams(location.search).get("f")||"battery").replace(/[^a-z0-9_-]/gi,"")+".json";
+fetch(FILE+"?"+Date.now()).then(r=>r.json()).then(async d=>{B=d;render();await pull();render();})
   .catch(()=>{$("list").innerHTML='<div class="empty">battery.json could not be loaded.</div>';});
 </script></body></html>
