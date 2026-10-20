@@ -1,9 +1,9 @@
 {
- "at": "2026-10-19 18:24",
+ "at": "2026-10-20 09:57",
  "criteria": "2026-10-05.5",
  "cases": 150,
  "failing": 1,
- "settled": 5,
+ "settled": 4,
  "confirmed": 0,
  "fails": [
   {
