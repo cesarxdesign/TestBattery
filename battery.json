@@ -1,9 +1,9 @@
 {
- "at": "2026-11-03 10:04",
+ "at": "2026-11-16 14:22",
  "criteria": "2026-10-05.5",
- "cases": 154,
- "failing": 1,
- "settled": 4,
+ "cases": 164,
+ "failing": 2,
+ "settled": 3,
  "confirmed": 0,
  "fails": [
   {
@@ -32,6 +32,46 @@
    "page": null,
    "confirmed": null,
    "kind": "a role I would take; the filter cuts it"
+  },
+  {
+   "id": "20696b77ada1479e",
+   "company": "clarify",
+   "title": "Staff Product Designer",
+   "url": "https://jobs.ashbyhq.com/clarify/1f3c2e58-526c-4a30-8c9b-77f31e2646cc",
+   "lane": "portugal",
+   "by": "vision",
+   "why": "the place named at the top is only a tag; the posting itself says Portugal is in · Staff product design role; the header says hybrid Seattle/San Francisco, but the body says office days apply only to Seattle-based staff and everyone else is fully distributed, so the page contradicts itself on whether remote from Portugal is allowed.",
+   "role": "yes",
+   "place": "pt_onsite",
+   "failed_on": "portugal",
+   "signals": [
+    {
+     "quote": "Seattle; Seattle / San Francisco",
+     "where": "under the title",
+     "kind": "tag",
+     "says": "portugal_out"
+    },
+    {
+     "quote": "Outside of Seattle, we're a fully distributed team.",
+     "where": "body",
+     "kind": "explicit",
+     "says": "portugal_in"
+    }
+   ],
+   "quote": "Our Seattle-based employees work from our Pioneer Square office three days a week. Outside of Seattle, we're a fully distributed team.",
+   "open_quote": null,
+   "top_line": "Seattle; Seattle / San Francisco",
+   "read": "employer",
+   "read_url": "https://jobs.ashbyhq.com/clarify/1f3c2e58-526c-4a30-8c9b-77f31e2646cc",
+   "read_at": "2026-11-03T00:08:36",
+   "read_criteria": "2026-10-05.5",
+   "location": "Seattle",
+   "posted": "2026-10-28",
+   "source": "ashby/clarify",
+   "still_up": true,
+   "page": "Staff Product Designer\nLocation\n\nSeattle; Seattle / San Francisco\n\nEmployment Type\n\nFull time\n\nLocation Type\n\nHybrid\n\nDepartment\n\nProduct & Design\n\nOverview\nApplication\nAbout Clarify\n\nClarify is building the AI-native CRM — a platform designed from the ground up for how modern go-to-market teams actually work. We raised $22.5M and assembled a team of ~27 people who believe the CRM category is overdue for a complete rethink: less manual data entry, smarter automation, and AI that actually understands your pipeline.\n\nWe're early and moving fast. The work you do here will directly shape how we grow.\n\nAbout the Role\n\nClarify ships a lot of product — integrations, our AI Rep, reporting, and Signals, launching in December — and today only a fraction of it gets a designer's full attention. You'll be our second product designer and the person who closes that gap.\n\nCRM is one of the most data-dense, workflow-heavy surfaces in software, and most of it was designed for managers, not the people who live in it all day. You'll own design end-to-end for major parts of the product: shaping problems with the founders and engineers, prototyping fast, and staying with the work until it ships. No research team to wait on, no design ops, no handoffs. Just a product that gets visibly better every day because you're here.\n\nWhat you'll do\n\nOwn design for a core product area end-to-end, from problem framing to shipped UI\n\nPartner with engineers daily and get designs into production every week\n\nDesign data-dense workflows — records, tables, pipelines, AI agents and signals — that feel fast and obvious\n\nPrototype with AI tools and code to test ideas before they hit the roadmap\n\nBuild the patterns and components that let engineers ship consistent UI without a designer in every loop\n\nTalk to customers and use what you hear to decide what to design next\n\nYour background\n\nYou've operated at a Staff level or above, setting design direction across a product, not just a feature\n\nYou've been an early designer at a B2B SaaS startup and shipped product, not just mocks\n\nYou go from problem to high-fidelity in days and keep iterating once it's live\n\nYou have strong interaction design instincts for complex, data-heavy tools\n\nYou work hand in hand with engineers and understand how your designs get built\n\nYou use AI tools in your design workflow and have opinions about where they help\n\nYour portfolio shows shipped work and the thinking behind it\n\nBonus: You've designed sales, CRM or developer tools\n\nBonus: You can prototype in React/Next.js\n\nCompensation and Benefits\n\nWe offer a salary range of $160,000-$220,000 depending on level and location, benchmarked against market data for startups our size, plus competitive stock options with standard 4-year vesting and a 1-year cliff. Benefits include fully covered medical, dental, and vision for you (50% for dependents), a 401(k) with company match, flexible time off, and generous parental leave. We bring the full team together 2–3 times a year for offsites.\n\nOur Seattle-based employees work from our Pioneer Square office three days a week. Outside of Seattle, we're a fully distributed team.\n\nClarify is an equal opportunity employer. We do not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability, veteran status, or any other protected characteristic. We are committed to building an inclusive team and encourage candidates from all backgrounds to apply.\n\nApply for this Job\nPowered by \n\nPrivacy PolicySecurityVulnerability Disclosure",
+   "confirmed": null,
+   "kind": "I moved it from portugal to cut; the filter still says portugal"
   }
  ]
 }
